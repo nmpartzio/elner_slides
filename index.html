@@ -1,0 +1,594 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+		<link rel="stylesheet" href="custom.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section> 
+					<h2>11th Hellenic Conference on Artificial Intelligence</h2>
+				    <h3>(SETN 2020)</h3>
+				</section>
+
+				<section data-markdown style="font-size: .55em;">
+				 
+				  <script type="text/template">
+
+## Example of annotation and boundary tagging schemes (BILOU, IOBES, IOB2)
+| Token-GR  | BILOU | IOBES | IOB2 | Token-EN |
+| --------- | ----- | ----- | ----- | ------- |	
+| Ο         | O     | O     | O     | na      | 
+| Κώστας    | U-PER | S-PER | B-PER | Costas  |
+| πηγαίνει  | O     | O     | O     | travels |
+| μαζί      | O     | O     | O     | with    |
+| με        | O     | O     | O     | na      |
+| την       | O     | O     | O     | na      |
+| Μαρία     | B-PER | B-PER | B-PER | Maria   |
+| Ελένη     | I-PER | I-PER | I-PER | Helen   |
+| Μίχου     | L-PER | E-PER | I-PER | Michou  |
+| στη       | O     | O     | O     | to      |    
+| Νέα       | B-LOC | B-LOC | B-LOC | New     |
+| Υόρκη     | L-LOC | E-LOC | I-LOC | York    |
+
+				  </script>
+
+				</section>
+
+				<section>
+ <section>
+ <h2 class="gold">Examples</h2>
+
+<figure class="fragment" data-fragment-index="1" style="font-size: .55em;" style="margin-bottom: 6rem" >
+<div class="entities" style="line-height: 2.5; direction: ltr">Από έρευνες σε οικίες και χώρους στην 
+<mark class="entity" style="background: #feca74; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    Κυψέλη
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">GPE</span>
+</mark>
+ και στη 
+<mark class="entity" style="background: #feca74; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    Μύκονο
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">GPE</span>
+</mark>
+ , βρέθηκαν και κατασχέθηκαν , ποσότητα κοκαΐνης βάρους 
+<mark class="entity" style="background: #e4e7d2; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    128,8 γραμμαρίων
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">QUANTITY</span>
+</mark>
+ , κρυμμένη ακόμα και μέσα σε πρίζες στον τοίχο , ποσότητα ακατέργαστης κάνναβης βάρους 
+<mark class="entity" style="background: #e4e7d2; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    176 γραμμαρίων
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">QUANTITY</span>
+</mark>
+ , 
+<mark class="entity" style="background: #e4e7d2; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    δύο
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">CARDINAL</span>
+</mark>
+ αυτοκίνητα , 
+<mark class="entity" style="background: #e4e7d2; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    2.990 ευρώ
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">MONEY</span>
+</mark>
+ , 
+<mark class="entity" style="background: #e4e7d2; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    έξι
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">CARDINAL</span>
+</mark>
+ κινητά τηλέφωνα , 
+<mark class="entity" style="background: #e4e7d2; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    τρεις
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">CARDINAL</span>
+</mark>
+ ζυγαριές ακριβείας , 
+<mark class="entity" style="background: #e4e7d2; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    τρία
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">CARDINAL</span>
+</mark>
+ βιβλιάρια τραπεζών με ύψος καταθέσεων 
+<mark class="entity" style="background: #e4e7d2; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    22.778 ευρώ
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">MONEY</span>
+</mark>
+ . </div>
+</figure>
+</section>
+
+<section>
+<figure class="fragment" data-fragment-index="2" style="font-size: .55em;" style="margin-bottom: 6rem">
+<div class="entities" style="line-height: 2.5; direction: ltr">
+<mark class="entity" style="background: #bfe1d9; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    Σάββατο 3/1
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">DATE</span>
+</mark>
+ , 
+<mark class="entity" style="background: #bfe1d9; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    20:15
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">TIME</span>
+</mark>
+ Q&amp;A με τον 
+<mark class="entity" style="background: #aa9cfc; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    Στέλιο Αποστολόπουλο
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">PERSON</span>
+</mark>
+ , διευθυντή φωτογραφίας του 
+<mark class="entity" style="background: #f0d0ff; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    Dolphin Man
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">WORK_OF_ART</span>
+</mark>
+ , και συζήτηση με το 
+<mark class="entity" style="background: #7aecec; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    Περιοδικό Φωτογράφος
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; text-transform: uppercase; vertical-align: middle; margin-left: 0.5rem">ORG</span>
+</mark>
+ για την υποβρύχια φωτογράφιση . </div>
+</figure>
+</section>
+				</section>
+			
+				<section>
+				<h2>Evaluation</h2>
+
+				</section>	
+
+				<section>
+					<h3>Occurrences per entity type in <span class="gold">elNER-4</span> dataset</h3>
+		
+					<canvas class="stretch" data-chart="bar">
+					<!--
+					{
+					 "data": {
+					  "labels": ["ORG"," PERSON"," LOC"," MISC"],
+					  "datasets": [
+					   {
+					    "data":[13527,10879,10120,3659],
+					    "label":"Occurrences per entity type",
+					    "backgroundColor":[	"rgba(255, 99, 132, 0.2)", 
+					    					"rgba(54, 162, 235, 0.2)",
+					    					"rgba(255, 206, 86, 0.2)",
+							                "rgba(75, 192, 192, 0.2)"
+					    				],
+					    "borderColor":[	"rgba(255, 99, 132, 1)", 
+					    				"rgba(54, 162, 235, 1)",
+					    				"rgba(255, 206, 86, 1)",
+							              "rgba(75, 192, 192, 1)"
+                					],
+                		"borderWidth": "1"
+					   }
+					  ]
+					 },
+					 "options": { "responsive": "true" }
+					}
+					-->
+					</canvas>
+
+				</section>
+
+
+				<section>
+					<h3>Occurrences per entity type in elNER-18 dataset</h3>
+					<canvas class="stretch" data-chart="bar">
+					<!--
+					{
+					 "data": {
+					  "labels": ["ORG"," PERSON"," CARDINAL"," GPE"," DATE"," PERCENT"," ORDINAL","LOC"," NORP"," TIME"," MONEY"," EVENT"," PRODUCT"," WORK_OF_ART","FAC"," QUANTITY"," LAW"," LANGUAGE"],
+					  "datasets": [
+					   {
+					    "data":[13527,10879,9013,8367,7855,1789,1774,1753,1693,1277,1233,1209,826,757,722,685,284,75],
+					    "label":"Occurrences per entity type",
+					    "backgroundColor":[	"rgba(255, 99, 132, 0.2)", 
+					    					"rgba(54, 162, 235, 0.2)",
+					    					"rgba(255, 206, 86, 0.2)",
+							                "rgba(75, 192, 192, 0.2)",
+							                "rgba(153, 102, 255, 0.2)",
+							                "rgba(255, 159, 64, 0.2)",
+							                "rgba(255, 105, 132, 0.2)", 
+					    					"rgba(54, 162, 235, 0.2)",
+					    					"rgba(255, 206, 86, 0.2)",
+							                "rgba(65, 192, 192, 0.2)",
+							                "rgba(13, 102, 255, 0.2)",
+							                "rgba(255, 159, 64, 0.2)",
+							                "rgba(205, 99, 132, 0.2)", 
+					    					"rgba(54, 162, 235, 0.2)",
+					    					"rgba(255, 206, 86, 0.2)",
+							                "rgba(175, 192, 192, 0.2)",
+							                "rgba(53, 102, 255, 0.2)",
+							                "rgba(225, 159, 64, 0.2)"
+
+					    				],
+					    "borderColor":[	"rgba(255, 99, 132, 1)", 
+					    					"rgba(54, 162, 235, 1)",
+					    					"rgba(255, 206, 86, 1)",
+							                "rgba(75, 192, 192, 1)",
+							                "rgba(153, 102, 255, 1)",
+							                "rgba(255, 159, 64, 1)",
+							                "rgba(255, 105, 132, 1)", 
+					    					"rgba(54, 162, 235, 1)",
+					    					"rgba(255, 206, 86, 1)",
+							                "rgba(65, 192, 192, 1)",
+							                "rgba(13, 102, 255, 1)",
+							                "rgba(255, 159, 64, 1)",
+							                "rgba(205, 99, 132, 1)", 
+					    					"rgba(54, 162, 235, 1)",
+					    					"rgba(255, 206, 86, 1)",
+							                "rgba(175, 192, 192, 1)",
+							                "rgba(53, 102, 255, 1)",
+							                "rgba(225, 159, 64, 1)"
+                					],
+                		"borderWidth": "1"
+					   }
+					  ]
+					 },
+					 "options": { "responsive": "true" }
+					}
+					-->
+					</canvas>
+				</section>
+
+				<section>
+					<h3>10-fold averaged performance metrics in % for NER
+in elNER-4.</h3>
+					<div class="r-stack">
+					<canvas class="fragment fade-out" data-fragment-index="0" data-chart="bar">
+					<!--
+					{
+					 "data": {
+					  "labels": ["Precision"," Recall"," F1"],
+					  "datasets":[
+					   {
+					    "data":[90.34,91.37,90.85],
+					    "label":"fastText","backgroundColor":"rgba(20,220,220,.2)","borderColor":"rgba(20,220,220,1)","borderWidth": "1"
+					   },
+					   {
+					    "data":[90.22,91.72,90.97],
+					    "label":"w/ ELMo","backgroundColor":"rgba(220,120,120,.2)","borderColor":"rgba(220,120,120,1)","borderWidth": "1"
+					   },
+					   {
+					    "data":[89.08,91.41,90.23],
+					    "label":"w/ BERT","backgroundColor":"rgba(120,220,120,.2)","borderColor":"rgba(120,220,120,1)","borderWidth": "1"
+					   }
+					  ]
+					 }, 
+					 "options": { 	"responsive": "true",
+					         		"title": {
+            							"display": "true",
+            							"text": "Model biLSTM-CRF"
+        							}, 
+					 				"scales": {
+            							"yAxes": [{
+                							"ticks": {
+                    							"suggestedMin": "86",
+                    							"suggestedMax": "93"
+                							}
+            							}]
+        							}
+        						}
+					}
+					-->
+					</canvas>
+					<canvas class="fragment current-visible" data-fragment-index="0" data-chart="bar">
+					<!--
+					{
+					 "data": {
+					  "labels": ["Precision"," Recall"," F1"],
+					  "datasets":[
+					   {
+					    "data":[89.69,91.15,90.41],
+					    "label":"fastText","backgroundColor":"rgba(20,220,220,.8)","borderColor":"rgba(20,220,220,1)","borderWidth": "1"
+					   },
+					   {
+					    "data":[89.40,91.29,90.34],
+					    "label":"w/ ELMo","backgroundColor":"rgba(220,120,120,.8)","borderColor":"rgba(220,120,120,1)","borderWidth": "1"
+					   },
+					   {
+					    "data":[88.30,91.12,89.68],
+					    "label":"w/ BERT","backgroundColor":"rgba(120,220,120,.8)","borderColor":"rgba(120,220,120,1)","borderWidth": "1"
+					   }
+					  ]
+					 }, 
+					 "options": { 	"responsive": "true",
+					         		"title": {
+            							"display": "true",
+            							"text": "Model biGRU-CRF"
+        							}, 
+					 				"scales": {
+            							"yAxes": [{
+                							"ticks": {
+                    							"suggestedMin": "86",
+                    							"suggestedMax": "93"
+                							}
+            							}]
+        							}
+        						}
+					}
+					-->
+					</canvas>
+					<canvas class="fragment fade-in-then-out" data-fragment-index="1" data-chart="bar">
+					<!--
+					{
+					 "data": {
+					  "labels": ["Precision"," Recall"," F1"],
+					  "datasets":[
+					   {
+					    "data":[89.51,91.47,90.48],
+					    "label":"fastText","backgroundColor":"rgba(20,220,220,.8)","borderColor":"rgba(20,220,220,1)","borderWidth": "1"
+					   },
+					   {
+					    "data":[90.32,91.79,91.04],
+					    "label":"w/ ELMo","backgroundColor":"rgba(220,120,120,.8)","borderColor":"rgba(220,120,120,1)","borderWidth": "1"
+					   },
+					   {
+					    "data":[89.11,90.77,89.91],
+					    "label":"w/ BERT","backgroundColor":"rgba(120,220,120,.8)","borderColor":"rgba(120,220,120,1)","borderWidth": "1"
+					   }
+					  ]
+					 }, 
+					 "options": { 	"responsive": "true",
+					         		"title": {
+            							"display": "true",
+            							"text": "Model biLSTM-CNN-CRF"
+        							}, 
+					 				"scales": {
+            							"yAxes": [{
+                							"ticks": {
+                    							"suggestedMin": "86",
+                    							"suggestedMax": "93"
+                							}
+            							}]
+        							}
+        						}
+					}
+					-->
+					</canvas>
+					<canvas class="fragment" data-chart="bar">
+					<!--
+					{
+					 "data": {
+					  "labels": ["Precision"," Recall"," F1"],
+					  "datasets":[
+					   {
+					    "data":[86.14,89.45,87.76],
+					    "label":"fastText","backgroundColor":"rgba(20,220,220,.8)","borderColor":"rgba(20,220,220,1)","borderWidth": "1"
+					   },
+					   {
+					    "data":[86.58,91.01,88.74],
+					    "label":"w/ ELMo","backgroundColor":"rgba(220,120,120,.8)","borderColor":"rgba(220,120,120,1)","borderWidth": "1"
+					   },
+					   {
+					    "data":[86.46,90.19,88.28],
+					    "label":"w/ BERT","backgroundColor":"rgba(120,220,120,.8)","borderColor":"rgba(120,220,120,1)","borderWidth": "1"
+					   }
+					  ]
+					 }, 
+					 "options": { 	"responsive": "true",
+					         		"title": {
+            							"display": "true",
+            							"text": "Model biLSTM-CNN"
+        							}, 
+					 				"scales": {
+            							"yAxes": [{
+                							"ticks": {
+                    							"suggestedMin": "86",
+                    							"suggestedMax": "93"
+                							}
+            							}]
+        							}
+        						}
+					}
+					-->
+					</canvas>
+
+					</div>
+				</section>
+
+				<section>
+					<h3>10-fold averaged performance metrics in % for NER
+in elNER-18.</h3>
+					<div class="r-stack">
+					<canvas class="fragment fade-out" data-fragment-index="0" data-chart="bar">
+					<!--
+					{
+					 "data": {
+					  "labels": ["Precision"," Recall"," F1"],
+					  "datasets":[
+					   {
+					    "data":[91.13,91.64,91.38],
+					    "label":"fastText","backgroundColor":"rgba(20,220,220,.8)"
+					   },
+					   {
+					    "data":[90.86,91.81,91.33],
+					    "label":"w/ ELMo","backgroundColor":"rgba(220,120,120,.8)"
+					   },
+					   {
+					    "data":[90.35,91.23,90.79],
+					    "label":"w/ BERT","backgroundColor":"rgba(120,220,120,.8)"
+					   }
+					  ]
+					 }, 
+					 "options": { 	"responsive": "true",
+					         		"title": {
+            							"display": "true",
+            							"text": "Model biLSTM-CRF"
+        							}, 
+					 				"scales": {
+            							"yAxes": [{
+                							"ticks": {
+                    							"suggestedMin": "86",
+                    							"suggestedMax": "93"
+                							}
+            							}]
+        							}
+        						}
+					}
+					-->
+					</canvas>
+					<canvas class="fragment current-visible" data-fragment-index="0" data-chart="bar">
+					<!--
+					{
+					 "data": {
+					  "labels": ["Precision"," Recall"," F1"],
+					  "datasets":[
+					   {
+					    "data":[89.90,90.75,90.32],
+					    "label":"fastText","backgroundColor":"rgba(20,220,220,.8)"
+					   },
+					   {
+					    "data":[90.08,91.22,90.65],
+					    "label":"w/ ELMo","backgroundColor":"rgba(220,120,120,.8)"
+					   },
+					   {
+					    "data":[89.66,91.22,90.43],
+					    "label":"w/ BERT","backgroundColor":"rgba(120,220,120,.8)"
+					   }
+					  ]
+					 }, 
+					 "options": { 	"responsive": "true",
+					         		"title": {
+            							"display": "true",
+            							"text": "Model biGRU-CRF"
+        							}, 
+					 				"scales": {
+            							"yAxes": [{
+                							"ticks": {
+                    							"suggestedMin": "86",
+                    							"suggestedMax": "93"
+                							}
+            							}]
+        							}
+        						}
+					}
+					-->
+					</canvas>
+					<canvas class="fragment fade-in-then-out" data-fragment-index="1" data-chart="bar">
+					<!--
+					{
+					 "data": {
+					  "labels": ["Precision"," Recall"," F1"],
+					  "datasets":[
+					   {
+					    "data":[90.64,91.52,91.08],
+					    "label":"fastText","backgroundColor":"rgba(20,220,220,.8)"
+					   },
+					   {
+					    "data":[90.99,91.88,91.43],
+					    "label":"w/ ELMo","backgroundColor":"rgba(220,120,120,.8)"
+					   },
+					   {
+					    "data":[89.98,91.22,90.60],
+					    "label":"w/ BERT","backgroundColor":"rgba(120,220,120,.8)"
+					   }
+					  ]
+					 }, 
+					 "options": { 	"responsive": "true",
+					         		"title": {
+            							"display": "true",
+            							"text": "Model biLSTM-CNN-CRF"
+        							}, 
+					 				"scales": {
+            							"yAxes": [{
+                							"ticks": {
+                    							"suggestedMin": "86",
+                    							"suggestedMax": "93"
+                							}
+            							}]
+        							}
+        						}
+					}
+					-->
+					</canvas>
+					<canvas class="fragment" data-chart="bar">
+					<!--
+					{
+					 "data": {
+					  "labels": ["Precision"," Recall"," F1"],
+					  "datasets":[
+					   {
+					    "data":[86.02,89.53,87.74],
+					    "label":"fastText","backgroundColor":"rgba(20,220,220,.8)"
+					   },
+					   {
+					    "data":[87.03,90.76,88.86],
+					    "label":"w/ ELMo","backgroundColor":"rgba(220,120,120,.8)"
+					   },
+					   {
+					    "data":[86.27,89.93,88.06],
+					    "label":"w/ BERT","backgroundColor":"rgba(120,220,120,.8)"
+					   }
+					  ]
+					 }, 
+					 "options": { 	"responsive": "true",
+					         		"title": {
+            							"display": "true",
+            							"text": "Model biLSTM-CNN"
+        							}, 
+					 				"scales": {
+            							"yAxes": [{
+                							"ticks": {
+                    							"suggestedMin": "86",
+                    							"suggestedMax": "93"
+                							}
+            							}]
+        							}
+        						}
+					}
+					-->
+					</canvas>
+
+					</div>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/chart/Chart.min.js"></script>
+		<script src="plugin/chart/plugin.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				// width: 1920,
+                // height: 1080,
+				chart: {
+					defaults: { 
+						global: { 
+							title: { fontColor: "#FFF" }, 
+							legend: {
+								position: "bottom",
+								labels: { fontColor: "#FFF" },
+							},
+							tooltips: {
+								labels: { fontColor: "#FFF" },
+							},
+						}, 
+	
+					},
+					line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ] }, 
+					bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
+					radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+				},
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealChart ]
+			});
+		</script>
+	</body>
+</html>

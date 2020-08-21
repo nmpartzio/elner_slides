@@ -1,0 +1,13 @@
+.reveal .gold {
+	color: gold;
+    text-shadow: 0px 2px 3px rgba(0,0,0,.3);
+}
+
+.reveal .lightblue {
+	color: lightskyblue;
+}
+
+.reveal .greenyellow {
+	color: greenyellow;
+	font-style: normal;
+}
