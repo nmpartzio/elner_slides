@@ -31,6 +31,31 @@
 					</div>
 				</section>
 
+				<section>
+					<h2 class="gold">Learning methods for NER</h2>
+					<ul>
+						<li>Feature-based supervised machine learning</li>
+						<ul><li>Recent years, deep neural networks (DNN)</li></ul>
+						<li>Unsupervised machine learning</li>
+						<li>Rule-based learning</li>
+					</ul>
+
+
+				</section>
+
+				<section>
+					<h2 class="gold">NER Applications</h2>
+					
+					<ul>
+						<li>NER can be used for content recommendation systems. (Netflix, newspaper articles)</li>
+						<li>A NER system could also be used to process customer feedback.</li>
+						<li>Research papers and academic articles are another field where NER can find application.</li>
+						<li>NER can help to categorize each news article in defined hierarchies, thus helping to better organize and retrieve content (people, organizations or countries mentioned in them). </li>
+					</ul>
+				</section>				
+
+
+
 				<section style="font-size: .5em">
 				 
 					<h2 class="gold">Example of annotation and boundary tagging</h2> 
@@ -148,100 +173,6 @@
 				</section>
 
 				<section>
-				 <section>
-				 <h2 class="gold">Examples</h2>
-				<div class="fragment" style="font-size: .55em;">
-				<figure style="margin-bottom: 6rem" >
-				<div class="entities" style="line-height: 2.5; direction: ltr">Από έρευνες σε οικίες και χώρους στην 
-				<mark class="entity" style="background: #feca74;">
-				    Κυψέλη
-				    <span>GPE</span>
-				</mark>
-				 και στη 
-				<mark class="entity" style="background: #feca74;">
-				    Μύκονο
-				    <span>GPE</span>
-				</mark>
-				 , βρέθηκαν και κατασχέθηκαν , ποσότητα κοκαΐνης βάρους 
-				<mark class="entity" style="background: #e4e7d2;">
-				    128,8 γραμμαρίων
-				    <span>QUANTITY</span>
-				</mark>
-				 , κρυμμένη ακόμα και μέσα σε πρίζες στον τοίχο , ποσότητα ακατέργαστης κάνναβης βάρους 
-				<mark class="entity" style="background: #e4e7d2;">
-				    176 γραμμαρίων
-				    <span>QUANTITY</span>
-				</mark>
-				 , 
-				<mark class="entity" style="background: #e4e7d2;">
-				    δύο
-				    <span>CARDINAL</span>
-				</mark>
-				 αυτοκίνητα , 
-				<mark class="entity" style="background: #e4e7d2;">
-				    2.990 ευρώ
-				    <span>MONEY</span>
-				</mark>
-				 , 
-				<mark class="entity" style="background: #e4e7d2;">
-				    έξι
-				    <span>CARDINAL</span>
-				</mark>
-				 κινητά τηλέφωνα , 
-				<mark class="entity" style="background: #e4e7d2;">
-				    τρεις
-				    <span>CARDINAL</span>
-				</mark>
-				 ζυγαριές ακριβείας , 
-				<mark class="entity" style="background: #e4e7d2;">
-				    τρία
-				    <span>CARDINAL</span>
-				</mark>
-				 βιβλιάρια τραπεζών με ύψος καταθέσεων 
-				<mark class="entity" style="background: #e4e7d2;">
-				    22.778 ευρώ
-				    <span>MONEY</span>
-				</mark>
-				 . </div>
-				</figure>
-				</div>
-				</section>
-
-				<section>
-				<div class="fragment" style="font-size: .55em;">
-				<figure style="margin-bottom: 6rem">
-				<div class="entities" style="line-height: 2.5; direction: ltr">
-				<mark class="entity" style="background: #bfe1d9;">
-				    Σάββατο 3/1
-				    <span>DATE</span>
-				</mark>
-				 , 
-				<mark class="entity" style="background: #bfe1d9;">
-				    20:15
-				    <span>TIME</span>
-				</mark>
-				 Q&amp;A με τον 
-				<mark class="entity" style="background: #aa9cfc;">
-				    Στέλιο Αποστολόπουλο
-				    <span>PERSON</span>
-				</mark>
-				 , διευθυντή φωτογραφίας του 
-				<mark class="entity" style="background: #f0d0ff;">
-				    Dolphin Man
-				    <span>WORK_OF_ART</span>
-				</mark>
-				 , και συζήτηση με το 
-				<mark class="entity" style="background: #7aecec;">
-				    Περιοδικό Φωτογράφος
-				    <span>ORG</span>
-				</mark>
-				 για την υποβρύχια φωτογράφιση . </div>
-				</figure>
-				</div>
-				</section>
-				</section>
-			
-				<section>
 				<h2 class="gold">Evaluation</h2>
 				<ul>
 				<li>Inspired from "<a href="https://github.com/eellak/gsoc2018-spacy">Addition of Greek language to spaCy</a>" for Google Summer of
@@ -254,7 +185,48 @@
 				performance in English.</li>
 				</ul>
 
+				</section>
+
+				<section  style="font-size: .6em">
+					
+					<h2 class="gold">Word Representations</h2>
+						<div>
+						
+						<ul>
+							<li><strong class="lightblue">Distributed</strong></li>
+							<ul>
+								<li><strong class="greenyellow">Word2Vec</strong></li>
+								<ul>
+									<li>Continuous bag-of-words (CBOW) model</li>
+									<li>Skipgram (SG) model</li>
+								</ul>
+								<li><strong class="greenyellow">Fasttext</strong> (use of subword embeddings <br> Words are represented by the sum of the n-gram vectors).</li>
+								<li><strong class="greenyellow">GloVe (Global Vector model)</strong>. <br>Co-occurrence count matrix, factorization, to get lower dimensional representations.</li>
+							</ul>	
+			
+							<li><strong class="lightblue">Contextualized</strong></li>
+							<ul>
+								<li><strong class="greenyellow">ELMo</strong>, <strong class="greenyellow">GPT2</strong>, <strong class="greenyellow">GPT3</strong>, <strong class="greenyellow">BERT</strong> <br> A word vector can take different values depending on its context.</li>
+							</ul>
+						</ul>
+						<p class="definition">Typically, word embeddings are pre-trained by optimizing an auxiliary objective in a large unlabeled corpus, such as predicting a word based on its context.</p>
+					</div>
+						
+
 				</section>	
+
+				<section>
+					<h2 class="gold">DNN Models</h2>
+
+					<ol>
+						<li>Bidirectional LSTM-CRF</li>
+						<li>Bidirectional LSTM-GRU</li>
+						<li>Bidirectional LSTM-CNNs-CRF</li>
+						<li>Bidirectional LSTM-CNN</li>
+						<li>spaCy NER model</li>
+					</ol>
+
+				</section>
 
 				<section>
 					<h3>Occurrences per entity type in <span class="gold">elNER-4</span> dataset</h3>
@@ -781,6 +753,113 @@ in <span class="gold">elNER-18</span></h3>
 					-->
 					</canvas>
 				</section>
+
+								<section>
+				 <section>
+				 <h2 class="gold">Examples</h2>
+				<div class="fragment" style="font-size: .55em;">
+				<figure style="margin-bottom: 6rem" >
+				<div class="entities" style="line-height: 2.5; direction: ltr">Από έρευνες σε οικίες και χώρους στην 
+				<mark class="entity" style="background: #feca74;">
+				    Κυψέλη
+				    <span>GPE</span>
+				</mark>
+				 και στη 
+				<mark class="entity" style="background: #feca74;">
+				    Μύκονο
+				    <span>GPE</span>
+				</mark>
+				 , βρέθηκαν και κατασχέθηκαν , ποσότητα κοκαΐνης βάρους 
+				<mark class="entity" style="background: #e4e7d2;">
+				    128,8 γραμμαρίων
+				    <span>QUANTITY</span>
+				</mark>
+				 , κρυμμένη ακόμα και μέσα σε πρίζες στον τοίχο , ποσότητα ακατέργαστης κάνναβης βάρους 
+				<mark class="entity" style="background: #e4e7d2;">
+				    176 γραμμαρίων
+				    <span>QUANTITY</span>
+				</mark>
+				 , 
+				<mark class="entity" style="background: #e4e7d2;">
+				    δύο
+				    <span>CARDINAL</span>
+				</mark>
+				 αυτοκίνητα , 
+				<mark class="entity" style="background: #e4e7d2;">
+				    2.990 ευρώ
+				    <span>MONEY</span>
+				</mark>
+				 , 
+				<mark class="entity" style="background: #e4e7d2;">
+				    έξι
+				    <span>CARDINAL</span>
+				</mark>
+				 κινητά τηλέφωνα , 
+				<mark class="entity" style="background: #e4e7d2;">
+				    τρεις
+				    <span>CARDINAL</span>
+				</mark>
+				 ζυγαριές ακριβείας , 
+				<mark class="entity" style="background: #e4e7d2;">
+				    τρία
+				    <span>CARDINAL</span>
+				</mark>
+				 βιβλιάρια τραπεζών με ύψος καταθέσεων 
+				<mark class="entity" style="background: #e4e7d2;">
+				    22.778 ευρώ
+				    <span>MONEY</span>
+				</mark>
+				 . </div>
+				</figure>
+				</div>
+				</section>
+
+				<section>
+				<div class="fragment" style="font-size: .55em;">
+				<figure style="margin-bottom: 6rem">
+				<div class="entities" style="line-height: 2.5; direction: ltr">
+				<mark class="entity" style="background: #bfe1d9;">
+				    Σάββατο 3/1
+				    <span>DATE</span>
+				</mark>
+				 , 
+				<mark class="entity" style="background: #bfe1d9;">
+				    20:15
+				    <span>TIME</span>
+				</mark>
+				 Q&amp;A με τον 
+				<mark class="entity" style="background: #aa9cfc;">
+				    Στέλιο Αποστολόπουλο
+				    <span>PERSON</span>
+				</mark>
+				 , διευθυντή φωτογραφίας του 
+				<mark class="entity" style="background: #f0d0ff;">
+				    Dolphin Man
+				    <span>WORK_OF_ART</span>
+				</mark>
+				 , και συζήτηση με το 
+				<mark class="entity" style="background: #7aecec;">
+				    Περιοδικό Φωτογράφος
+				    <span>ORG</span>
+				</mark>
+				 για την υποβρύχια φωτογράφιση . </div>
+				</figure>
+				</div>
+				</section>
+				</section>
+
+				<section style="font-size: .6em">
+					<h2 class="gold">Discussion</h2>
+
+						<ul>
+						<li>Best results are obtained from the neural networks who use in last layer a CRF decoding function.</li>
+						<li>Entities with low number of samples and high ambiguity i.e., WORK OF ART, FAC, PRODUCT, EVENT, LAW have worse precision, recall and F-score metrics.</li>
+						<li>Word representations and character-based representations was used to capture morphological and orthographic information.</li>
+						<li>In order to reduce overfitting, dropout is applied after the output of each LSTM layer.</li>
+						<li>In order to prevent the learning system from depending too heavily on one representation class, dropout is used.</li>
+						</ul>
+				</section>
+
 
 				<section>
 					<h2 class="gold">Conclusions</h2>
