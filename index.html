@@ -22,7 +22,7 @@
 				<section> 
 					
 					<h2 class="gold">Datasets and Performance Metrics for Greek Named Entity Recognition</h2>
-					<h4 class="lightblue">11th Hellenic Conference on Artificial Intelligence</h4>
+					<h4 class="lightblue">11<sub>th</sub> Hellenic Conference on Artificial Intelligence</h4>
 				    <h4>(SETN 2020)</h4>
 				    <div class="authors">
 						<p><a href="#">Nikos Bartziokas</a>, Aristotle University of Thessaloniki</p>
@@ -31,28 +31,119 @@
 					</div>
 				</section>
 
-				<section data-markdown style="font-size: .55em;">
+				<section style="font-size: .5em">
 				 
-				  <script type="text/template">
+					<h2 class="gold">Example of annotation and boundary tagging</h2> 
+				    <h3 class="lightblue">schemes (BILOU, IOBES, IOB2)</h3>
 
-## Example of annotation and boundary tagging <!-- .element: class="gold" -->
-### schemes (BILOU, IOBES, IOB2)  <!-- .element: class="lightblue" -->
-| Token-GR  | BILOU | IOBES | IOB2 | Token-EN |
-| --------- | ----- | ----- | ----- | ------- |	
-| Ο         | O     | O     | O     | na      | 
-| Κώστας    | U-PER | S-PER | B-PER | Costas  |
-| πηγαίνει  | O     | O     | O     | travels |
-| μαζί      | O     | O     | O     | with    |
-| με        | O     | O     | O     | na      |
-| την       | O     | O     | O     | na      |
-| Μαρία     | B-PER | B-PER | B-PER | Maria   |
-| Ελένη     | I-PER | I-PER | I-PER | Helen   |
-| Μίχου     | L-PER | E-PER | I-PER | Michou  |
-| στη       | O     | O     | O     | to      |    
-| Νέα       | B-LOC | B-LOC | B-LOC | New     |
-| Υόρκη     | L-LOC | E-LOC | I-LOC | York    |
+					<table style="float: right;width: 60%">
+					<thead>
+					<tr>
+					<th>Token-GR</th>
+					<th>BILOU</th>
+					<th>IOBES</th>
+					<th>IOB2</th>
+					<th>Token-EN</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td>Ο</td>
+					<td>O</td>
+					<td>O</td>
+					<td>O</td>
+					<td>n/a</td>
+					</tr>
+					<tr>
+					<td>Κώστας</td>
+					<td><strong class="greenyellow">U-</strong><span class="lightblue">PER</span></td>
+					<td><strong class="greenyellow">S-</strong><span class="lightblue">PER</span></td>
+					<td><strong class="greenyellow">B-</strong><span class="lightblue">PER</span></td>
+					<td>Costas</td>
+					</tr>
+					<tr>
+					<td>πηγαίνει</td>
+					<td>O</td>
+					<td>O</td>
+					<td>O</td>
+					<td>travels</td>
+					</tr>
+					<tr>
+					<td>μαζί</td>
+					<td>O</td>
+					<td>O</td>
+					<td>O</td>
+					<td>with</td>
+					</tr>
+					<tr>
+					<td>με</td>
+					<td>O</td>
+					<td>O</td>
+					<td>O</td>
+					<td>n/a</td>
+					</tr>
+					<tr>
+					<td>την</td>
+					<td>O</td>
+					<td>O</td>
+					<td>O</td>
+					<td>n/a</td>
+					</tr>
+					<tr>
+					<td>Μαρία</td>
+					<td><strong class="greenyellow">B-</strong><span class="lightblue">PER</span></td>
+					<td><strong class="greenyellow">B-</strong><span class="lightblue">PER</span></td>
+					<td><strong class="greenyellow">B-</strong><span class="lightblue">PER</span></td>
+					<td>Maria</td>
+					</tr>
+					<tr>
+					<td>Ελένη</td>
+					<td><strong class="greenyellow">I-</strong><span class="lightblue">PER</span></td>
+					<td><strong class="greenyellow">I-</strong><span class="lightblue">PER</span></td>
+					<td><strong class="greenyellow">I-</strong><span class="lightblue">PER</span></td>
+					<td>Helen</td>
+					</tr>
+					<tr>
+					<td>Μίχου</td>
+					<td><strong class="greenyellow">L-</strong><span class="lightblue">PER</span></td>
+					<td><strong class="greenyellow">E-</strong><span class="lightblue">PER</span></td>
+					<td><strong class="greenyellow">I-</strong><span class="lightblue">PER</span></td>
+					<td>Michou</td>
+					</tr>
+					<tr>
+					<td>στη</td>
+					<td>O</td>
+					<td>O</td>
+					<td>O</td>
+					<td>to</td>
+					</tr>
+					<tr>
+					<td>Νέα</td>
+					<td><strong class="greenyellow">B-</strong><span class="lightblue">LOC</span></td>
+					<td><strong class="greenyellow">B-</strong><span class="lightblue">LOC</span></td>
+					<td><strong class="greenyellow">B-</strong><span class="lightblue">LOC</span></td>
+					<td>New</td>
+					</tr>
+					<tr>
+					<td>Υόρκη</td>
+					<td><strong class="greenyellow">L-</strong><span class="lightblue">LOC</span></td>
+					<td><strong class="greenyellow">E-</strong><span class="lightblue">LOC</span></td>
+					<td><strong class="greenyellow">I-</strong><span class="lightblue">LOC</span></td>
+					<td>York</td>
+					</tr>
+					</tbody>
+					</table>
 
-				  </script>
+					<div>
+
+					<ul>
+						<li><strong class="greenyellow">B (Begin)</strong> <br>Indicates the first token of the entity.</li>
+						<li><strong class="greenyellow">I (Inside)</strong>  <br>Indicates a part of the entity.</li>
+						<li><strong class="greenyellow">L,E (Last or End)</strong>  <br>Indicates last token of the entity.</li>
+						<li><strong class="greenyellow">U,S (Unit or Single)</strong> <br>Indicates a single token entity.</li>
+						<li><strong class="lightblue">PER, ORG, LOC, MISC</strong> <br>Indicates an entity type.</li>
+					</ul>
+					</div>
 
 				</section>
 
@@ -250,8 +341,9 @@
 				</section>
 
 				<section>
-					<h3>10-fold averaged performance metrics in % for NER
-in <span class="gold">elNER-4</span>.</h3>
+					<h3>10-fold averaged performance for NER
+in <span class="gold">elNER-4</span></h3>
+					<h5>(metrics in %)</h5>
 					<div class="r-stack">
 					<canvas class="fragment fade-out" data-fragment-index="0" data-chart="bar">
 					<!--
@@ -406,8 +498,9 @@ in <span class="gold">elNER-4</span>.</h3>
 				</section>
 
 				<section>
-					<h3>10-fold averaged performance metrics in % for NER
-in <span class="gold">elNER-18</span>.</h3>
+					<h3>10-fold averaged performance for NER
+in <span class="gold">elNER-18</span></h3>
+					<h5>(metrics in %)</h5>
 					<div class="r-stack">
 					<canvas class="fragment fade-out" data-fragment-index="0" data-chart="bar">
 					<!--
@@ -559,6 +652,10 @@ in <span class="gold">elNER-18</span>.</h3>
 					</canvas>
 
 					</div>
+				</section>
+
+				<section>
+					<h2 class="gold">Conclusions</h2>
 				</section>
 
 			</div>
