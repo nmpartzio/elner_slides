@@ -18,14 +18,17 @@
 		<div class="reveal">
 			<div class="slides">
 				
+				<!-- Intro -->
 				<section> 
-					<h2 class="gold">Datasets and Performance Metrics for Greek Named Entity Recognition</h2>
-					<h4>11th Hellenic Conference on Artificial Intelligence</h4>
-				    <h3>(SETN 2020)</h3>
 					
-					<aside class="notes">
-						Shhh, these are your private notes 📝
-  				</aside>
+					<h2 class="gold">Datasets and Performance Metrics for Greek Named Entity Recognition</h2>
+					<h4 class="lightblue">11th Hellenic Conference on Artificial Intelligence</h4>
+				    <h3>(SETN 2020)</h3>
+				    <div class="authors">
+						<p><a href="#">Nikos Bartziokas</a>, Aristotle University of Thessaloniki</p>
+						<p><a href="#">Thanassis Mavropoulos</a>, Aristotle University of Thessaloniki</p>
+						<p><a href="#">Constantine Kotropoulos</a>, Aristotle University of Thessaloniki</p>
+					</div>
 				</section>
 
 				<section data-markdown style="font-size: .55em;">
@@ -55,8 +58,8 @@
 				<section>
  <section>
  <h2 class="gold">Examples</h2>
-
-<figure class="fragment" data-fragment-index="1" style="font-size: .55em;" style="margin-bottom: 6rem" >
+<div class="fragment" style="font-size: .55em;">
+<figure style="margin-bottom: 6rem" >
 <div class="entities" style="line-height: 2.5; direction: ltr">Από έρευνες σε οικίες και χώρους στην 
 <mark class="entity" style="background: #feca74; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
     Κυψέλη
@@ -109,10 +112,12 @@
 </mark>
  . </div>
 </figure>
+</div>
 </section>
 
 <section>
-<figure class="fragment" data-fragment-index="2" style="font-size: .55em;" style="margin-bottom: 6rem">
+<div class="fragment" style="font-size: .55em;">
+<figure style="margin-bottom: 6rem">
 <div class="entities" style="line-height: 2.5; direction: ltr">
 <mark class="entity" style="background: #bfe1d9; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
     Σάββατο 3/1
@@ -140,6 +145,7 @@
 </mark>
  για την υποβρύχια φωτογράφιση . </div>
 </figure>
+</div>
 </section>
 				</section>
 			
@@ -254,15 +260,15 @@ in elNER-4.</h3>
 					  "datasets":[
 					   {
 					    "data":[90.34,91.37,90.85],
-					    "label":"fastText","backgroundColor":"rgba(20,220,220,.2)","borderColor":"rgba(20,220,220,1)","borderWidth": "1"
+					    "label":"fastText"
 					   },
 					   {
 					    "data":[90.22,91.72,90.97],
-					    "label":"w/ ELMo","backgroundColor":"rgba(220,120,120,.2)","borderColor":"rgba(220,120,120,1)","borderWidth": "1"
+					    "label":"w/ ELMo"
 					   },
 					   {
 					    "data":[89.08,91.41,90.23],
-					    "label":"w/ BERT","backgroundColor":"rgba(120,220,120,.2)","borderColor":"rgba(120,220,120,1)","borderWidth": "1"
+					    "label":"w/ BERT"
 					   }
 					  ]
 					 }, 
@@ -291,15 +297,15 @@ in elNER-4.</h3>
 					  "datasets":[
 					   {
 					    "data":[89.69,91.15,90.41],
-					    "label":"fastText","backgroundColor":"rgba(20,220,220,.8)","borderColor":"rgba(20,220,220,1)","borderWidth": "1"
+					    "label":"fastText"
 					   },
 					   {
 					    "data":[89.40,91.29,90.34],
-					    "label":"w/ ELMo","backgroundColor":"rgba(220,120,120,.8)","borderColor":"rgba(220,120,120,1)","borderWidth": "1"
+					    "label":"w/ ELMo"
 					   },
 					   {
 					    "data":[88.30,91.12,89.68],
-					    "label":"w/ BERT","backgroundColor":"rgba(120,220,120,.8)","borderColor":"rgba(120,220,120,1)","borderWidth": "1"
+					    "label":"w/ BERT"
 					   }
 					  ]
 					 }, 
@@ -328,15 +334,15 @@ in elNER-4.</h3>
 					  "datasets":[
 					   {
 					    "data":[89.51,91.47,90.48],
-					    "label":"fastText","backgroundColor":"rgba(20,220,220,.8)","borderColor":"rgba(20,220,220,1)","borderWidth": "1"
+					    "label":"fastText"
 					   },
 					   {
 					    "data":[90.32,91.79,91.04],
-					    "label":"w/ ELMo","backgroundColor":"rgba(220,120,120,.8)","borderColor":"rgba(220,120,120,1)","borderWidth": "1"
+					    "label":"w/ ELMo"
 					   },
 					   {
 					    "data":[89.11,90.77,89.91],
-					    "label":"w/ BERT","backgroundColor":"rgba(120,220,120,.8)","borderColor":"rgba(120,220,120,1)","borderWidth": "1"
+					    "label":"w/ BERT"
 					   }
 					  ]
 					 }, 
@@ -365,15 +371,15 @@ in elNER-4.</h3>
 					  "datasets":[
 					   {
 					    "data":[86.14,89.45,87.76],
-					    "label":"fastText","backgroundColor":"rgba(20,220,220,.8)","borderColor":"rgba(20,220,220,1)","borderWidth": "1"
+					    "label":"fastText"
 					   },
 					   {
 					    "data":[86.58,91.01,88.74],
-					    "label":"w/ ELMo","backgroundColor":"rgba(220,120,120,.8)","borderColor":"rgba(220,120,120,1)","borderWidth": "1"
+					    "label":"w/ ELMo"
 					   },
 					   {
 					    "data":[86.46,90.19,88.28],
-					    "label":"w/ BERT","backgroundColor":"rgba(120,220,120,.8)","borderColor":"rgba(120,220,120,1)","borderWidth": "1"
+					    "label":"w/ BERT"
 					   }
 					  ]
 					 }, 
@@ -410,15 +416,15 @@ in elNER-18.</h3>
 					  "datasets":[
 					   {
 					    "data":[91.13,91.64,91.38],
-					    "label":"fastText","backgroundColor":"rgba(20,220,220,.8)"
+					    "label":"fastText"
 					   },
 					   {
 					    "data":[90.86,91.81,91.33],
-					    "label":"w/ ELMo","backgroundColor":"rgba(220,120,120,.8)"
+					    "label":"w/ ELMo"
 					   },
 					   {
 					    "data":[90.35,91.23,90.79],
-					    "label":"w/ BERT","backgroundColor":"rgba(120,220,120,.8)"
+					    "label":"w/ BERT"
 					   }
 					  ]
 					 }, 
@@ -447,15 +453,15 @@ in elNER-18.</h3>
 					  "datasets":[
 					   {
 					    "data":[89.90,90.75,90.32],
-					    "label":"fastText","backgroundColor":"rgba(20,220,220,.8)"
+					    "label":"fastText"
 					   },
 					   {
 					    "data":[90.08,91.22,90.65],
-					    "label":"w/ ELMo","backgroundColor":"rgba(220,120,120,.8)"
+					    "label":"w/ ELMo"
 					   },
 					   {
 					    "data":[89.66,91.22,90.43],
-					    "label":"w/ BERT","backgroundColor":"rgba(120,220,120,.8)"
+					    "label":"w/ BERT"
 					   }
 					  ]
 					 }, 
@@ -484,15 +490,15 @@ in elNER-18.</h3>
 					  "datasets":[
 					   {
 					    "data":[90.64,91.52,91.08],
-					    "label":"fastText","backgroundColor":"rgba(20,220,220,.8)"
+					    "label":"fastText"
 					   },
 					   {
 					    "data":[90.99,91.88,91.43],
-					    "label":"w/ ELMo","backgroundColor":"rgba(220,120,120,.8)"
+					    "label":"w/ ELMo"
 					   },
 					   {
 					    "data":[89.98,91.22,90.60],
-					    "label":"w/ BERT","backgroundColor":"rgba(120,220,120,.8)"
+					    "label":"w/ BERT"
 					   }
 					  ]
 					 }, 
@@ -521,15 +527,15 @@ in elNER-18.</h3>
 					  "datasets":[
 					   {
 					    "data":[86.02,89.53,87.74],
-					    "label":"fastText","backgroundColor":"rgba(20,220,220,.8)"
+					    "label":"fastText"
 					   },
 					   {
 					    "data":[87.03,90.76,88.86],
-					    "label":"w/ ELMo","backgroundColor":"rgba(220,120,120,.8)"
+					    "label":"w/ ELMo"
 					   },
 					   {
 					    "data":[86.27,89.93,88.06],
-					    "label":"w/ BERT","backgroundColor":"rgba(120,220,120,.8)"
+					    "label":"w/ BERT"
 					   }
 					  ]
 					 }, 
@@ -582,13 +588,157 @@ in elNER-18.</h3>
 							tooltips: {
 								labels: { fontColor: "#FFF" },
 							},
+							           scales: {
+                        xAxes: [{
+                            display: true,
+                            scaleLabel: {
+                                display: true,
+                                fontColor:'#FFF',
+                                fontSize:10
+                            },
+                            ticks: {
+                               fontColor: "white",
+                               fontSize: 14
+                              }
+                        }],
+                        yAxes: [{
+                            display: true,
+                            scaleLabel: {
+                                display: true,
+                                fontColor: '#FFF',
+                                fontSize:10
+                            },
+                            ticks: {
+                                  fontColor: "white",
+                                  fontSize: 14
+                            }
+                        }]
+                 }
+
 						}, 
 	
 					},
 					line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ] }, 
-					bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
-					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
-					radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+					bar: { backgroundColor:[	"rgba(255, 99, 132, 0.2)", 
+					"rgba(54, 162, 235, 0.2)",
+					"rgba(255, 206, 86, 0.2)",
+	                "rgba(75, 192, 192, 0.2)",
+	                "rgba(153, 102, 255, 0.2)",
+	                "rgba(255, 159, 64, 0.2)",
+	                "rgba(255, 105, 132, 0.2)", 
+					"rgba(54, 162, 235, 0.2)",
+					"rgba(255, 206, 86, 0.2)",
+	                "rgba(65, 192, 192, 0.2)",
+	                "rgba(13, 102, 255, 0.2)",
+	                "rgba(255, 159, 64, 0.2)",
+	                "rgba(205, 99, 132, 0.2)", 
+					"rgba(54, 162, 235, 0.2)",
+					"rgba(255, 206, 86, 0.2)",
+	                "rgba(175, 192, 192, 0.2)",
+	                "rgba(53, 102, 255, 0.2)",
+					"rgba(225, 159, 64, 0.2)"
+
+				],
+borderColor:[	"rgba(255, 99, 132, 1)", 
+				"rgba(54, 162, 235, 1)",
+				"rgba(255, 206, 86, 1)",
+                "rgba(75, 192, 192, 1)",
+                "rgba(153, 102, 255, 1)",
+                "rgba(255, 159, 64, 1)",
+                "rgba(255, 105, 132, 1)", 
+				"rgba(54, 162, 235, 1)",
+				"rgba(255, 206, 86, 1)",
+                "rgba(65, 192, 192, 1)",
+                "rgba(13, 102, 255, 1)",
+                "rgba(255, 159, 64, 1)",
+                "rgba(205, 99, 132, 1)", 
+				"rgba(54, 162, 235, 1)",
+				"rgba(255, 206, 86, 1)",
+                "rgba(175, 192, 192, 1)",
+                "rgba(53, 102, 255, 1)",
+	             "rgba(225, 159, 64, 1)"
+			],
+borderWidth: "1"}, 
+					pie: {backgroundColor:[	"rgba(255, 99, 132, 0.2)", 
+					"rgba(54, 162, 235, 0.2)",
+					"rgba(255, 206, 86, 0.2)",
+	                "rgba(75, 192, 192, 0.2)",
+	                "rgba(153, 102, 255, 0.2)",
+	                "rgba(255, 159, 64, 0.2)",
+	                "rgba(255, 105, 132, 0.2)", 
+					"rgba(54, 162, 235, 0.2)",
+					"rgba(255, 206, 86, 0.2)",
+	                "rgba(65, 192, 192, 0.2)",
+	                "rgba(13, 102, 255, 0.2)",
+	                "rgba(255, 159, 64, 0.2)",
+	                "rgba(205, 99, 132, 0.2)", 
+					"rgba(54, 162, 235, 0.2)",
+					"rgba(255, 206, 86, 0.2)",
+	                "rgba(175, 192, 192, 0.2)",
+	                "rgba(53, 102, 255, 0.2)",
+					"rgba(225, 159, 64, 0.2)"
+
+				],
+borderColor:[	"rgba(255, 99, 132, 1)", 
+				"rgba(54, 162, 235, 1)",
+				"rgba(255, 206, 86, 1)",
+                "rgba(75, 192, 192, 1)",
+                "rgba(153, 102, 255, 1)",
+                "rgba(255, 159, 64, 1)",
+                "rgba(255, 105, 132, 1)", 
+				"rgba(54, 162, 235, 1)",
+				"rgba(255, 206, 86, 1)",
+                "rgba(65, 192, 192, 1)",
+                "rgba(13, 102, 255, 1)",
+                "rgba(255, 159, 64, 1)",
+                "rgba(205, 99, 132, 1)", 
+				"rgba(54, 162, 235, 1)",
+				"rgba(255, 206, 86, 1)",
+                "rgba(175, 192, 192, 1)",
+                "rgba(53, 102, 255, 1)",
+	             "rgba(225, 159, 64, 1)"
+			],
+borderWidth: "1"},
+					radar: {backgroundColor:[	"rgba(255, 99, 132, 0.2)", 
+					"rgba(54, 162, 235, 0.2)",
+					"rgba(255, 206, 86, 0.2)",
+	                "rgba(75, 192, 192, 0.2)",
+	                "rgba(153, 102, 255, 0.2)",
+	                "rgba(255, 159, 64, 0.2)",
+	                "rgba(255, 105, 132, 0.2)", 
+					"rgba(54, 162, 235, 0.2)",
+					"rgba(255, 206, 86, 0.2)",
+	                "rgba(65, 192, 192, 0.2)",
+	                "rgba(13, 102, 255, 0.2)",
+	                "rgba(255, 159, 64, 0.2)",
+	                "rgba(205, 99, 132, 0.2)", 
+					"rgba(54, 162, 235, 0.2)",
+					"rgba(255, 206, 86, 0.2)",
+	                "rgba(175, 192, 192, 0.2)",
+	                "rgba(53, 102, 255, 0.2)",
+					"rgba(225, 159, 64, 0.2)"
+
+				],
+borderColor:[	"rgba(255, 99, 132, 1)", 
+				"rgba(54, 162, 235, 1)",
+				"rgba(255, 206, 86, 1)",
+                "rgba(75, 192, 192, 1)",
+                "rgba(153, 102, 255, 1)",
+                "rgba(255, 159, 64, 1)",
+                "rgba(255, 105, 132, 1)", 
+				"rgba(54, 162, 235, 1)",
+				"rgba(255, 206, 86, 1)",
+                "rgba(65, 192, 192, 1)",
+                "rgba(13, 102, 255, 1)",
+                "rgba(255, 159, 64, 1)",
+                "rgba(205, 99, 132, 1)", 
+				"rgba(54, 162, 235, 1)",
+				"rgba(255, 206, 86, 1)",
+                "rgba(175, 192, 192, 1)",
+                "rgba(53, 102, 255, 1)",
+	             "rgba(225, 159, 64, 1)"
+			],
+borderWidth: "1"}, 
 				},
 
 				// Learn about plugins: https://revealjs.com/plugins/
