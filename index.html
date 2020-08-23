@@ -411,6 +411,9 @@
 						<li>Bidirectional LSTM-CNN</li>
 						<li>spaCy NER model</li>
 					</ol>
+					<p>Word representations and character-based representations was used to capture morphological and orthographic information.</p>
+						<p>In order to reduce overfitting, dropout is applied after the output of each LSTM layer.</p>
+						<p>In order to prevent the learning system from depending too heavily on one representation class, dropout is used.</p>
 
 				</section>
 				
@@ -1073,9 +1076,6 @@ in <span class="gold">elNER-18</span></h3>
 						<ul>
 						<li>Best results are obtained from the neural networks who use in last layer a CRF decoding function.</li>
 						<li>Entities with low number of samples and high ambiguity i.e., WORK OF ART, FAC, PRODUCT, EVENT, LAW have worse precision, recall and F-score metrics.</li>
-						<li>Word representations and character-based representations was used to capture morphological and orthographic information.</li>
-						<li>In order to reduce overfitting, dropout is applied after the output of each LSTM layer.</li>
-						<li>In order to prevent the learning system from depending too heavily on one representation class, dropout is used.</li>
 						</ul>
 				</section>
 				
@@ -1112,6 +1112,7 @@ in <span class="gold">elNER-18</span></h3>
 				<li>Presentation<br>
 	            <a href="https://nmpartzio.github.io/elner_slides">https://nmpartzio.github.io/elner_slides</a></li>
 				</ul>
+					<span class="greenyellow">THANK YOU!</span>
 				</section>
 
 			</div>
