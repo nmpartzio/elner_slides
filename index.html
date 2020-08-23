@@ -98,8 +98,8 @@
 					<ul>
 						<li>BBN TECHNOLOGIES tag-set</li>
 						<ul><li>29 category types in total</li>
-						<li>18 selected for the elNER-18 dataset</li>
-						<li>4 selected (via merging similar categories) for the elNER-4 dataset</li></ul>
+						<li>18 selected for the <span class="greenyellow">elNER-18</span> dataset</li>
+						<li>4 selected (via merging similar categories) for the <span class="greenyellow">elNER-4</span> dataset</li></ul>
 						<li>Used boundary tagging scheme: Inside-Outside-Beginning-End-Single (IOBES)</li>
 						<li>Standard dataset split: train (80%), development (10%), and test (10%)</li>
 					</ul>
@@ -320,16 +320,14 @@
 
 				<section>
 				<h2 class="gold">Evaluation metrics</h2>
-				<ul>
-					<li></li>
-				</ul>
+		\
 					\begin{equation}
 					F_i =2 \times \frac{P_i \times R_i}{P_i+R_i} \quad \text { F-macro }= \frac{\sum_i{F_i}}{C} .
 					\end{equation}
 					
 					\begin{equation}
-          P = \frac{ \sum_i{TP_i} } { \sum_i{(TP_i+FP_i)} } \quad  R=\frac{ \sum_i{TP_i} } { \sum_i{(TP_i+FN_i)} } \quad \text { F-micro }=2 \times \frac{P \times  R}{P+R} .
-          \end{equation}
+			          P = \frac{ \sum_i{TP_i} } { \sum_i{(TP_i+FP_i)} } \quad  R=\frac{ \sum_i{TP_i} } { \sum_i{(TP_i+FN_i)} } \quad \text { F-micro }=2 \times \frac{P \times  R}{P+R} .
+			         \end{equation}
 
 				</section>
 
