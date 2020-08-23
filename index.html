@@ -85,7 +85,7 @@
 				</section>
 
 				<section>
-					<h2 class="gold">Methodology - Corpus pre-processing</h2>
+					<h2 class="gold">Corpus pre-processing</h2>
 					<ul>
 						<li>Preprocessing with <a href="https://spacy.io">spaCy</a></li>
 						<li><a href="https://prodi.gy">Prodigy</a> was used to annotate the documents.</li>
@@ -95,12 +95,14 @@
 				</section>
 				
 				<section>
-					<h2 class="gold">Methodology - Annotation specifications</h2>
+					<h2 class="gold">Annotation specifications</h2>
 					<ul>
 						<li>BBN TECHNOLOGIES tag-set</li>
 						<ul><li>29 category types in total</li>
 						<li>18 selected for the elNER-18 dataset</li>
 						<li>4 selected (via merging similar categories) for the elNER-4 dataset</li></ul>
+						<li>Used boundary tagging scheme: Inside-Outside-Beginning-End-Single (IOBES)</li>
+						<li>Standard dataset split: train (80%), development (10%), and test (10%)</li>
 					</ul>
 
 
