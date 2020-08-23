@@ -98,17 +98,133 @@
 				</section>
 				
 				<section>
-					<h2 class="gold">Annotation specifications</h2>
-					<ul>
-						<li>BBN TECHNOLOGIES tag-set</li>
-						<ul><li>29 category types in total</li>
-						<li>18 selected for the <span class="greenyellow">elNER-18</span> dataset</li>
-						<li>4 selected (via merging similar categories) for the <span class="greenyellow">elNER-4</span> dataset</li></ul>
-						<li>Used boundary tagging scheme: Inside-Outside-Beginning-End-Single (IOBES)</li>
-						<li>Standard dataset split: train (80%), development (10%), and test (10%)</li>
-					</ul>
+					<section>
+											<h2 class="gold">Annotation specifications</h2>
+						<ul>
+							<li>BBN TECHNOLOGIES tag-set</li>
+							<ul><li>29 category types in total</li>
+							<li>18 selected for the <span class="greenyellow">elNER-18</span> dataset</li>
+							<li>4 selected (via merging similar categories) for the <span class="greenyellow">elNER-4</span> dataset</li></ul>
+							<li>Used boundary tagging scheme: Inside-Outside-Beginning-End-Single (IOBES)</li>
+							<li>Standard dataset split: train (80%), development (10%), and test (10%)</li>
+						</ul>
+					</section>
 
+					<section>
+						<h2 class="gold">Ontonotes 5 annotations</h2>
+						<table>
+						<thead>
+						<tr>
+						<th>TYPE</th>
+						<th>DESCRIPTION</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+						<td>PERSON</td>
+						<td>People, including fictional.</td>
+						</tr>
+						<tr>
+						<td>NORP</td>
+						<td>Nationalities or religious or political groups.</td>
+						</tr>
+						<tr>
+						<td>FAC</td>
+						<td>Buildings, airports, highways, bridges, etc.</td>
+						</tr>
+						<tr>
+						<td>ORG</td>
+						<td>Companies, agencies, institutions, etc.</td>
+						</tr>
+						<tr>
+						<td>GPE</td>
+						<td>Countries, cities, states.</td>
+						</tr>
+						<tr>
+						<td>LOC</td>
+						<td>Non-GPE locations, mountain ranges, bodies of water.</td>
+						</tr>
+						<tr>
+						<td>PRODUCT</td>
+						<td>Objects, vehicles, foods, etc. (Not services.)</td>
+						</tr>
+						<tr>
+						<td>EVENT</td>
+						<td>Named hurricanes, battles, wars, sports events, etc.</td>
+						</tr>
+						<tr>
+						<td>WORK_OF_ART</td>
+						<td>Titles of books, songs, etc.</td>
+						</tr>
+						<tr>
+						<td>LAW</td>
+						<td>Named documents made into laws.</td>
+						</tr>
+						<tr>
+						<td>LANGUAGE</td>
+						<td>Any named language.</td>
+						</tr>
+						<tr>
+						<td>DATE</td>
+						<td>Absolute or relative dates or periods.</td>
+						</tr>
+						<tr>
+						<td>TIME</td>
+						<td>Times smaller than a day.</td>
+						</tr>
+						<tr>
+						<td>PERCENT</td>
+						<td>Percentage, including ``\%&#39;&#39;.</td>
+						</tr>
+						<tr>
+						<td>MONEY</td>
+						<td>Monetary values, including unit.</td>
+						</tr>
+						<tr>
+						<td>QUANTITY</td>
+						<td>Measurements, as of weight or distance.</td>
+						</tr>
+						<tr>
+						<td>ORDINAL</td>
+						<td>“first”, “second”, etc.</td>
+						</tr>
+						<tr>
+						<td>CARDINAL</td>
+						<td>Numerals that do not fall under another type.</td>
+						</tr>
+						</tbody>
+						</table>
 
+					</section>
+					<section>
+						<h2 class="gold">CoNLL 2003 annotations</h2>
+						<table>
+						<thead>
+						<tr>
+						<th>TYPE</th>
+						<th>DESCRIPTION</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+						<td>PERS</td>
+						<td>Named person or family.</td>
+						</tr>
+						<tr>
+						<td>LOC</td>
+						<td>Name of politically or geographically defined location (cities, provinces, countries, international regions, bodies of water, mountains).</td>
+						</tr>
+						<tr>
+						<td>ORG</td>
+						<td>Named corporate, governmental, or other organizational entity.</td>
+						</tr>
+						<tr>
+						<td>MISC</td>
+						<td>Miscellaneous entities, e.g. events, nationalities, products or works of art.</td>
+						</tr>
+						</tbody>
+						</table>
+					</section>
 				</section>
 				
 				<section style="font-size: .5em">
@@ -1073,7 +1189,7 @@ in <span class="gold">elNER-18</span></h3>
 				<ul>
 				<li>
 					Dataset elNER<br>
-					<a href="https://nmpartzio.github.io/elner">https://nmpartzio.github.io/elner</a></li>
+					<a href="https://github.com/nmpartzio/elner">https://github.com/nmpartzio/elner</a></li>
 				
 				<li>Presentation<br>
 	            <a href="https://nmpartzio.github.io/elner_slides">https://nmpartzio.github.io/elner_slides</a></li>
