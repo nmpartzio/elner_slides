@@ -983,6 +983,7 @@ in <span class="gold">elNER-18</span></h3>
 		<script src="plugin/highlight/highlight.js"></script>
 		<script src="plugin/chart/Chart.min.js"></script>
 		<script src="plugin/chart/plugin.js"></script>
+		<script src="plugin/math/math.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -990,7 +991,13 @@ in <span class="gold">elNER-18</span></h3>
 			Reveal.initialize({
 				hash: true,
 				// width: 1920,
-                // height: 1080,
+        // height: 1080,
+				math: {
+      mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+      config: 'TeX-AMS_HTML-full',
+      // pass other options into `MathJax.Hub.Config()`
+      TeX: { Macros: { RR: "{\\bf R}" } }
+    },
 				chart: {
 					defaults: { 
 						global: { 
@@ -1156,7 +1163,7 @@ borderWidth: "1"},
 				},
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealChart ]
+				plugins: [ RevealMath, RevealMarkdown, RevealHighlight, RevealNotes, RevealChart ]
 			});
 		</script>
 	</body>
