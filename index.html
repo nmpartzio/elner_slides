@@ -360,7 +360,7 @@
 
 				<section>
 					<h2 class="gold">EXPERIMENTAL SETUP - DNN Models</h2>
-					<p>The criterion for selecting the architectures was their performance in English.</p>
+				
 					<ol>
 						<li>Bidirectional LSTM-CRF</li>
 						<li>Bidirectional LSTM-GRU</li>
@@ -368,6 +368,8 @@
 						<li>Bidirectional LSTM-CNN</li>
 						<li>spaCy NER model</li>
 					</ol>
+
+					<p class="definition">The criterion for selecting the architectures was their performance in English.</p>
 
 				</section>
 				
@@ -959,12 +961,14 @@ in <span class="gold">elNER-18</span></h3>
 				
 				<section>
 					<h2 class="gold">EXPERIMENTAL SETUP - Error Analysis</h2>
-					Issues encountered from erroneous sentence segmentation
+					
 					<ol>
 						<li>Inability to correctly address certain acronyms</li>
 						<li>Abbreviations like <span class="lightblue">"κ.|mr." or "δρ.|dr."</span></li>
 						<li>legislation typology like <span class="lightblue">"ν. 1243/2020|law1243/2020"</span></li>
 					</ol>
+
+					<p class="definition">Issues encountered from erroneous sentence segmentation</p>
 
 				</section>
 
@@ -974,7 +978,7 @@ in <span class="gold">elNER-18</span></h3>
 						<li>Annotation strategy will be validated by a second annotator</li>
 						<li>Sentence segmentation improvements</li>
 						<li>Hyperparameter fine-tuning</li>
-						<li>More experiments, including different annotation schemata for word embeddings, such as GloVe, own-trained ELMo, and BERT</li>
+						<li>More experiments, including different annotation schemata for word embeddings, such as <span class="greenyellow">GloVe</span>, own-trained <span class="greenyellow">ELMo</span>, and <span class="greenyellow">BERT</span></li>
 					</ul>
 				</section>
 
