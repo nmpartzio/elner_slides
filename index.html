@@ -931,91 +931,41 @@ in <span class="gold">elNER-18</span></h3>
 					</canvas>
 					</section>
 					<section>
-						<table>
-							<thead>
-							<tr>
-							<th></th>
-							<th>Precision</th>
-							<th>Recall</th>
-							<th>F1</th>
-							</tr>
-							</thead>
-							<tbody>
-							<tr>
-							<td>LOC</td>
-							<td>89.30</td>
-							<td>93.92</td>
-							<td>91.55</td>
-							</tr>
-							<tr>
-							<td>ORG</td>
-							<td>87.61</td>
-							<td>86.10</td>
-							<td>86.85</td>
-							</tr>
-							<tr>
-							<td>PERSON</td>
-							<td>94.46</td>
-							<td>95.72</td>
-							<td>95.09</td>
-							</tr>
-							<tr>
-							<td>MISC</td>
-							<td>78.75</td>
-							<td>78.31</td>
-							<td>78.53</td>
-							</tr>
-							<tr style="background:#dddddd77;">
-							<td>all</td>
-							<td>89.16</td>
-							<td>90.10</td>
-							<td>89.63</td>
-							</tr>
-							</tbody>
-							</table>
-							
-						<table style="float:right;">
-							<thead>
-							<tr>
-							<th></th>
-							<th>Precision</th>
-							<th>Recall</th>
-							<th>F1</th>
-							</tr>
-							</thead>
-							<tbody>
-							<tr>
-							<td>LOC</td>
-							<td>89.30</td>
-							<td>93.92</td>
-							<td>91.55</td>
-							</tr>
-							<tr>
-							<td>ORG</td>
-							<td>87.61</td>
-							<td>86.10</td>
-							<td>86.85</td>
-							</tr>
-							<tr>
-							<td>PERSON</td>
-							<td>94.46</td>
-							<td>95.72</td>
-							<td>95.09</td>
-							</tr>
-							<tr>
-							<td>MISC</td>
-							<td>78.75</td>
-							<td>78.31</td>
-							<td>78.53</td>
-							</tr>
-							<tr style="background:#dddddd77;">
-							<td>all</td>
-							<td>89.16</td>
-							<td>90.10</td>
-							<td>89.63</td>
-							</tr>
-							</tbody>
-							</table>
+						
+											<canvas class="fragment fade-out" data-fragment-index="0" data-chart="bar">
+					<!--
+					{
+					 "data": {
+					  "labels": ["Precision"," Recall"," F1"],
+					  "datasets":[
+					   {
+					    "data":[89.16,90.10,89.63],
+					    "label":"spaCy"
+					   },
+					   {
+					    "data":[91.59,91.13,91.36],
+					    "label":"biLSTM-CRF"
+					   }
+					  ]
+					 }, 
+					 "options": { 	"responsive": "true",
+					         		"title": {
+            							"display": "true",
+            							"text": "Model spaCy & biLSTM-CRF"
+        							}, 
+					 				"scales": {
+            							"yAxes": [{
+                							"ticks": {
+                    							"suggestedMin": "86",
+                    							"suggestedMax": "93"
+                							}
+            							}]
+        							}
+        						}
+					}
+					-->
+					</canvas>
+		
 					</section>
 				</section>
 
